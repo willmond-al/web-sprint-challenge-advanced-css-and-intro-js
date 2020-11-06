@@ -140,7 +140,9 @@ button:hover{
         border: 1px solid grey;
     }
 
-  
+  .title-container div{
+      margin-left: 0;
+  }
 
     .title-container{
         width: 120%;
