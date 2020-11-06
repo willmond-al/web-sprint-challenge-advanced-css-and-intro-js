@@ -246,7 +246,7 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let newArray = []
   for(let i = 0; i < array.length; i++){
-    if (array[i].years.includes("19"))
+    if (array[i].years.startsWith("19")) 
     newArray.push(array[i].name)
   }
   return newArray
@@ -287,8 +287,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 At the end, this function should return the new array with information added"*/
 
 function addArtist(array, id, name, years, genre, nationality, bio){
-    array.push
+    array.push({"id":id, "name":name, "years":years, "genre":genre, "nationality":nationality, "bio":bio})
+      return array
   }
+
+  console.log(addArtist(artists, 20, "Will Mondal", "1999-2020", "Web Design", "British", "grew up in Twickenham, London and studied Biology at university."))
 
   
 
@@ -301,11 +304,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let newArray = []
+  for(let i = 0; i < array.length; i++){
+    if (array[i].paintings>100){
+      newArray.push(array[i].name)
+    }
+  }
+  return newArray
 }
 
-
+console.log(lotsOfArt(artists))
 
 
 // 🎨🎨 STRETCH 🎨🎨//
