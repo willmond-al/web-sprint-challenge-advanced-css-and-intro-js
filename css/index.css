@@ -136,16 +136,18 @@ button:hover{
 }
 
 @media(max-width:500px){
-    div{
+    /* div{
         border: 1px solid grey;
-    }
+    } */
 
   .title-container div{
       margin-left: 0;
   }
 
     .title-container{
-        width: 120%;
+        width: 130%;
+        background-size: cover;
+        justify-content: start;
     }
 
     nav{
@@ -155,7 +157,8 @@ button:hover{
     .artists-container{
         flex-wrap: wrap;
         width: 115%;
-        justify-content: center;
+        justify-content: start;
+        margin-left: 18%;
         align-items: center;
        
         
@@ -163,6 +166,7 @@ button:hover{
 
     .artist {
         width: 60%;
+        justify-content: start;
         
     }
 
